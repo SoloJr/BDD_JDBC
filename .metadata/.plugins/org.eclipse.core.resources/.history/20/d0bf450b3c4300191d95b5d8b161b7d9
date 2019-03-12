@@ -1,0 +1,20 @@
+package com.unitbv.util;
+
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import com.unitbv.database.DatabaseConnection;
+import com.unitbv.model.Student;
+
+public class DatabaseOperations {
+	
+	private DatabaseConnection databaseConnection;
+	
+	public DatabaseOperations(DatabaseConnection databaseConnection) {
+		this.databaseConnection = databaseConnection;
+	}
+	
+	public List<Student> getAllStudents() {
+		PreparedStatement ps = databaseConnection.getConnection().prepareStatement();
+	}
+}

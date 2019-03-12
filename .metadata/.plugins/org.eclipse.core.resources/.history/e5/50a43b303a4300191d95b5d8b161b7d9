@@ -1,0 +1,6 @@
+package com.unitbv.database;
+
+public class DatabaseConnection {
+
+	private Database database;
+}

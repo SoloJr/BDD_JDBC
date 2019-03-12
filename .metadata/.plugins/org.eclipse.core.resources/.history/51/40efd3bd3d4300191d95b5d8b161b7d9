@@ -1,0 +1,11 @@
+package com.unitbv.main;
+
+import com.unitbv.database.Database;
+import com.unitbv.database.DatabaseConnection;
+
+public class MainClass {
+	public static void main(String[] args) {
+		Database database = new Database("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/Student", "root", "toor");
+		DatabaseConnection databaseConnection = new DatabaseConnection(database);
+	}
+}

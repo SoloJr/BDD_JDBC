@@ -1,0 +1,12 @@
+package com.unitbv.database;
+
+public class DatabaseConnection {
+
+	private Database database;
+
+	public DatabaseConnection(Database database) {
+		this.database = database;
+	}
+	
+	
+}

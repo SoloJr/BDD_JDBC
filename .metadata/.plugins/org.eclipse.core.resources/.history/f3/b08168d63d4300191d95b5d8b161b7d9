@@ -1,0 +1,15 @@
+package com.unitbv.main;
+
+import com.unitbv.database.Database;
+import com.unitbv.database.DatabaseConnection;
+import com.unitbv.util.DatabaseOperations;
+
+public class MainClass {
+	public static void main(String[] args) {
+		Database database = new Database("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/Student", "root", "toor");
+		DatabaseConnection databaseConnection = new DatabaseConnection(database);
+		DatabaseOperations databaseOperations = new DatabaseOperations(databaseConnection);
+		
+		List<Student> students = databaseOperations.getAllStudents();
+	}
+}

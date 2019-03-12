@@ -1,0 +1,27 @@
+package com.unitbv.util;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.unitbv.database.DatabaseConnection;
+import com.unitbv.model.Student;
+
+public class DatabaseOperations {
+	
+	private DatabaseConnection databaseConnection;
+	
+	public DatabaseOperations(DatabaseConnection databaseConnection) {
+		this.databaseConnection = databaseConnection;
+	}
+	
+	public List<Student> getAllStudents() {
+		String query = "SELECT idStudent, firstName, lastName, dateOfBirth, city FROM students";
+		try {
+			PreparedStatement ps = databaseConnection.getConnection().prepareStatement(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

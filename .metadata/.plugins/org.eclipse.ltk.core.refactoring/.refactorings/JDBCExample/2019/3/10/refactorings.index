@@ -1,0 +1,6 @@
+1552224963877	Rename package 'com.unitbv'
+1552224967680	Delete element
+1552225185755	Rename type 'DatabaseConnection'
+1552225238605	Rename type 'DatabaseConneciton'
+1552225601457	Encapsulate field 'connection'
+1552226633931	Rename type 'Main'

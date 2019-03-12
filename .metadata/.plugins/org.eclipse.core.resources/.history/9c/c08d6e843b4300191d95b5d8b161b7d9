@@ -1,0 +1,11 @@
+package com.unitbv.util;
+
+import com.unitbv.model.Student;
+
+public class DatabaseOperations {
+	
+	
+	public List<Student> getAllStudents() {
+		
+	}
+}

@@ -1,0 +1,28 @@
+package com.unitbv.main;
+
+import java.sql.Date;
+import java.util.List;
+
+import com.unitbv.database.Database;
+import com.unitbv.database.DatabaseConnection;
+import com.unitbv.model.Student;
+import com.unitbv.util.DatabaseOperations;
+
+public class MainClass {
+	public static void main(String[] args) {
+		Database database = new Database("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/jdbcexample", "root", "toor");
+		DatabaseConnection databaseConnection = new DatabaseConnection(database);
+		databaseConnection.createConnection();
+		DatabaseOperations databaseOperations = new DatabaseOperations(databaseConnection);
+		
+		List<Student> students = databaseOperations.getAllStudents();
+		databaseOperations.printListOfStudents(students);
+		
+		Student studentToAdd = new Student(42, "Forty", "Two", Date.valueOf("2019-03-11"), "Everywhere");
+		
+		databaseOperations.addStudent(studentToAdd);
+		
+		students = databaseOperations.getAllStudents();
+		databaseOperations.printListOfStudents(students);
+	}
+}

@@ -1,0 +1,12 @@
+package com.unitbv.database;
+
+public class DatabaseConnection {
+
+	private String jdbcDriver;
+	
+	private String databaseUrl;
+	
+	private String username;
+	
+	private String password;
+}
